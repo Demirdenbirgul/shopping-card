@@ -1,73 +1,52 @@
-# React + TypeScript + Vite
+# 🛒 Shopping Cart App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern bir alışveriş sepeti uygulaması (React + TypeScript + Tailwind CSS)
 
-Currently, two official plugins are available:
+## 🚀 Proje Hakkında
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Bu proje, React ve TypeScript becerilerimi geliştirmek amacıyla oluşturulmuş basit bir e-ticaret sepet uygulamasıdır. Ürün listeleme, sepete ekleme ve sepet yönetimi gibi temel e-ticaret mantıklarını içerir.
 
-## React Compiler
+## 🛠 Kullanılan Teknolojiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Tailwind CSS
+- React Router DOM
+- Context API (State Management)
 
-## Expanding the ESLint configuration
+## ✨ Özellikler
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Ürünleri listeleme
+- Sepete ürün ekleme / çıkarma
+- Ürün miktarını artırma / azaltma
+- Gerçek zamanlı sepet güncellemesi
+- Responsive tasarım (mobil uyumlu)
+- Sidebar (off-canvas cart)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Kurulum
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Projeyi çalıştırmak için:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm install  
+npm run dev  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📂 Projeyi Klonlama
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+git clone https://github.com/Demirdenbirgul/shopping-card.git  
+cd shopping-card  
+npm install  
+npm run dev  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📌 Amaç
+
+Bu proje;
+- React component yapısını öğrenmek  
+- Context API ile state yönetimi  
+- React Router kullanımı  
+- Responsive UI tasarımı  
+
+amaçlarıyla geliştirilmiştir.
+
+## 🙌 Geri Bildirim
+
+Her türlü feedback’e açığım 🚀
