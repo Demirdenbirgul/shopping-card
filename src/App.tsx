@@ -4,11 +4,13 @@ import { Store } from "./pages/Store";
 import { About } from "./pages/About";
 import Navbar from "./components/Navbar";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import ShoppingCart from "./components/ShoppingCart";
 
 function App() {
   return (
     <ShoppingCartProvider>
       <Navbar />
+      <ShoppingCart /> 
       <div className="max-w-7xl mb-3 mx-auto p-4 sm:px-6 lg:px-8">
         <Routes>
           <Route path="/" element={<Home />}></Route>

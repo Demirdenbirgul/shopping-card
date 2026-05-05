@@ -20,7 +20,7 @@ const StoreItem = ({ item }: StoreItemProps) => {
   const quantity = getItemQuantity(item.id);
 
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col">
+    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition flex flex-col h-[335px]">
       {/* Image */}
       <img
         src={item.imgUrl}

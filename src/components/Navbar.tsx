@@ -2,9 +2,11 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiOutlineMenu } from "react-icons/hi";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+   const [isOpen, setIsOpen] = useState(false);
+  const { openCart, cartQuantity } = useShoppingCart();
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>
     isActive
@@ -39,18 +41,15 @@ const Navbar = () => {
         {/* Sağ taraf (Cart + Hamburger) */}
         <div className="flex items-center gap-4">
           {/* Cart */}
-          <div className="relative cursor-pointer text-gray-700 hover:text-blue-500 transition-all duration-200">
+          <div onClick={openCart} className="relative cursor-pointer text-gray-700 hover:text-blue-500 transition-all duration-200">
             <AiOutlineShoppingCart className="text-2xl" />
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-1.5 rounded-full">
-              0
+              {cartQuantity}
             </span>
           </div>
 
           {/* Hamburger (icon) */}
-          <button
-            className="md:hidden text-2xl"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className="md:hidden text-2xl" onClick={openCart}>
             <HiOutlineMenu />
           </button>
         </div>
